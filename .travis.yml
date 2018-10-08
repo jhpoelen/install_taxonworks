@@ -6,5 +6,7 @@ services:
 - docker
 script:
 - cd development/docker
+- docker-compose up --no-start
+- docker-compose images
 - docker-compose up -d
 - docker-compose down 
