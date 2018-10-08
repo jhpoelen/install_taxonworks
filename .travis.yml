@@ -6,6 +6,6 @@ services:
 - docker
 script:
 - docker build . --tag jhpoelen/taxonworks-dev:latest
-- docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+- echo "$DOCKER_PASSWORD" > docker login -u "$DOCKER_USERNAME" --password-stdin
 - docker images
 - docker push jhpoelen/taxonworks-dev:latest
