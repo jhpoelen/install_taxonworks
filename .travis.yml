@@ -5,7 +5,6 @@ compiler:
 services:
 - docker
 script:
-- docker build . --tag jhpoelen/taxonworks-dev:latest
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-- docker images
-- docker push jhpoelen/taxonworks-dev:latest
+- cd development/docker
+- docker-compose up
+- docker-compose down 
